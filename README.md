@@ -29,4 +29,6 @@ Spring 2019 GCT525 by `Prof. Sunghee Lee`
 <p>
      <img src='./HW1/gif/bezier.gif' width=300>
 </p>
+
+
 ## HW2 -
