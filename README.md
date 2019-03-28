@@ -9,24 +9,24 @@ Spring 2019 GCT525 by `Prof. Sunghee Lee`
       * Exponential Map --> Quaternion
 
 **Euler**
-<p align="center">    
+<p>    
      <img src='./HW1/gif/euler.gif' width=300>
 </p>
 
 **Exponential Map**
-<p align="center">
+<p>
      <img src='./HW1/gif/exp.gif' width=300>
 </p>
 
 **Quaternion**
-<p align="center">
+<p>
      <img src='./HW1/gif/quat.gif' width=300>
 </p>
 
 
 2. Implement `Bezier Curve` and `Frenet Frame`
   * Tangent, Normal, Binormal  
-<p align="center">
+<p>
      <img src='./HW1/gif/bezier.gif' width=300>
 </p>
 ## HW2 -
