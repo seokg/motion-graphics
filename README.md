@@ -9,9 +9,9 @@ Spring 2019 GCT525 by `Prof. Sunghee Lee`
       * Exponential Map --> Quaternion
 
 
-<p align="center">
+<p align="center" font-weight:bold>
      
-     **Euler**
+      Euler
 
      <img src='./HW1/gif/euler.gif' width=300>
      **Exponential Map**
