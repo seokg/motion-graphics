@@ -1,2 +1,6 @@
-# motion-graphics
-GCT525 Motion Graphics course by Prof. Sunghee Lee
+# GCT525 Motion Graphics
+Spring 2019 GCT525 by Prof. Sunghee Lee
+
+## HW1 -Rotations and Bezier Curve
+
+## HW2 -
