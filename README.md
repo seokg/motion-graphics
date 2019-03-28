@@ -7,6 +7,8 @@ Spring 2019 GCT525 by `Prof. Sunghee Lee`
       * Rotation Matrix --> Quaternion
       * Rotation Matrix --> Exponential Map
       * Exponential Map --> Quaternion
+
+
 **Euler**
 ![](./HW1/gif/euler.gif=100x20)
 
