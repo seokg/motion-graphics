@@ -35,6 +35,6 @@ When Trace `Tr` of rotation matrix `R` is close to zero or negative, the convers
 To make the conversion stable devide the conversion into four cases [[link]](https://en.wikipedia.org/wiki/Quaternions_and_spatial_rotation#Conversion_to_and_from_the_matrix_representation).
 
 ### Finding the normal vector of the Frenet Frame
-[[link]](https://en.wikipedia.org/wiki/Frenet%E2%80%93Serret_formulas#Formulas_in_n_dimensions)
+Follow the procedure of [[link]](https://en.wikipedia.org/wiki/Frenet%E2%80%93Serret_formulas#Formulas_in_n_dimensions).
 
 
