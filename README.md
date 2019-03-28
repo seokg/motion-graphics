@@ -11,19 +11,19 @@ Spring 2019 GCT525 by `Prof. Sunghee Lee`
 
 **Euler**
 
-![alt text](./HW1/gif/euler.gif =100x20)
+![alt text](./HW1/gif/euler.gif =100x)
 
 **Exponential Map**
 
-![alt text](./HW1/gif/exp.gif =100x20)
+![alt text](./HW1/gif/exp.gif =100x)
 
 **Quaternion**
 
-![alt text](./HW1/gif/quat.gif=100x20)
+![alt text](./HW1/gif/quat.gif=100x)
 
 2. Implement `Bezier Curve` and `Frenet Frame`
   * Tangent, Normal, Binormal  
   
-![alt text](./HW1/gif/bezier.gif=100x20)
+![alt text](./HW1/gif/bezier.gif=100x)
 
 ## HW2 -
