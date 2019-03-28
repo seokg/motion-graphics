@@ -46,8 +46,8 @@ public class BezierCurve : MonoBehaviour
         Vector3 b_t = ComputeFrenetNormal(t_t, n_t);
 
         // Visualize the axes of frenet frame (use Debug.DrawLine())
-        Debug.Log("airplane position: " + Airplane.transform.position);
-        Debug.Log("airplane tangent: " + (Airplane.transform.position + t_t));
+        //Debug.Log("airplane position: " + Airplane.transform.position);
+        //Debug.Log("airplane tangent: " + (Airplane.transform.position + t_t));
 
         Debug.DrawLine(Airplane.transform.position, Airplane.transform.position + 20 * t_t, Color.blue);
         Debug.DrawLine(Airplane.transform.position, Airplane.transform.position + 20 * n_t, Color.red);
@@ -55,9 +55,9 @@ public class BezierCurve : MonoBehaviour
 
         // Generate rotation matrix with basis vectors of franet frame and convert it to a quaternion (use Matrix4x4, RotToQuat())
         Matrix4x4 rot = new Matrix4x4();
-        rot.SetColumn(0, new Vector4(t_t.x, t_t.y, t_t.z, 0));
-        rot.SetColumn(1, new Vector4(n_t.x, n_t.y, n_t.z, 0));
-        rot.SetColumn(2, new Vector4(b_t.x, b_t.y, b_t.z, 0));
+        rot.SetColumn(0, new Vector4(n_t.x, n_t.y, n_t.z, 0));
+        rot.SetColumn(1, new Vector4(b_t.x, b_t.y, b_t.z, 0));
+        rot.SetColumn(2, new Vector4(t_t.x, t_t.y, t_t.z, 0));
         rot.SetColumn(3, new Vector4(0,0,0,1));
         Quaternion q = RotToQuat(rot);
 
@@ -181,6 +181,15 @@ public class BezierCurve : MonoBehaviour
         return N.normalized;
     }
 
+    float MatTrace(Matrix4x4 M)
+    {
+        float trace = 0.0f;
+        for (int i=0; i<3 ;i++)
+        {
+            trace += M[i, i];
+        }
+        return trace;
+    }
     public Quaternion RotToQuat(Matrix4x4 R)
     {
         Quaternion q = new Quaternion();
@@ -189,10 +198,47 @@ public class BezierCurve : MonoBehaviour
         /// #2                                                    ///
         /// copy function implemented at #2 of ComputeRotation.cs ///
         /////////////////////////////////////////////////////////////
-        q.w = Mathf.Sqrt(Mathf.Max(0, 1 + R[0, 0] + R[1, 1] + R[2, 2])) / 2;
-        q.x = (R[2, 1] - R[1, 2]) / q.w / 4.0f;
-        q.y = (R[0, 2] - R[2, 0]) / q.w / 4.0f;
-        q.z = (R[1, 0] - R[0, 1]) / q.w / 4.0f;
+        ///
+        Debug.Log("rotation matrix: \n"+R);
+        float trace = MatTrace(R);
+        float S;
+        if (trace > 0)
+        {
+            q.w = Mathf.Sqrt(Mathf.Max(0, 1 + R[0, 0] + R[1, 1] + R[2, 2])) / 2;
+            q.x = (R[2, 1] - R[1, 2]) / q.w / 4.0f;
+            q.y = (R[0, 2] - R[2, 0]) / q.w / 4.0f;
+            q.z = (R[1, 0] - R[0, 1]) / q.w / 4.0f;
+
+        }
+        else
+        {
+            Debug.Log("Warning: Trace is smaller or equal to zero");
+            if ((R.m00 > R.m11) & (R.m00 > R.m22))
+            {
+                S = Mathf.Sqrt(1 + R[0, 0] - R[1, 1] - R[2, 2]) * 2;
+                q.w = (R.m21 - R.m12) / S;
+                q.x = 0.25f * S;
+                q.y = (R.m01 + R.m10) / S;
+                q.z = (R.m02 + R.m20) / S;
+            }
+            else if (R.m11 > R.m22)
+            {
+                S = Mathf.Sqrt(1 + R[1, 1] - R[0, 0] - R[2, 2]) * 2;
+                q.w = (R.m02 - R.m20) / S;
+                q.x = (R.m01 + R.m10) / S;
+                q.y = 0.25f * S;
+                q.z = (R.m12 + R.m21) / S;
+            }
+            else
+            {
+                S = Mathf.Sqrt(1 + R[2, 2] - R[1, 1] - R[0, 0]) * 2;
+                q.w = (R.m10 - R.m01) / S;
+                q.x = (R.m02 + R.m20) / S;
+                q.y = (R.m12 + R.m21) / S;
+                q.z = 0.25f * S;
+            }
+
+        }
         return q;
     }
 }
