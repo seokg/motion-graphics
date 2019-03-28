@@ -30,7 +30,7 @@
 
 ## Troubleshooting
 ### Convertering rotation matrix to quaternion
-When Trace `Tr` of rotation matrix `R` is close to zero or negative, the conversion is unstable ([[link]](https://en.wikipedia.org/wiki/Quaternions_and_spatial_rotation#Conversion_to_and_from_the_matrix_representation)).
+When Trace `Tr` of rotation matrix `R` is close to zero or negative, the conversion is unstable [[link]](https://en.wikipedia.org/wiki/Quaternions_and_spatial_rotation#Conversion_to_and_from_the_matrix_representation).
 
 To make the conversion stable devide the conversion into four cases [[link]](https://en.wikipedia.org/wiki/Quaternions_and_spatial_rotation#Conversion_to_and_from_the_matrix_representation).
 
