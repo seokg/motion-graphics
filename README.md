@@ -8,17 +8,18 @@ Spring 2019 GCT525 by `Prof. Sunghee Lee`
       * Rotation Matrix --> Exponential Map
       * Exponential Map --> Quaternion
 
-
-<p align="center" font-weight:bold>
-     
-      Euler
-
+**Euler**
+<p align="center">    
      <img src='./HW1/gif/euler.gif' width=300>
-     **Exponential Map**
+</p>
+
+**Exponential Map**
+<p align="center">
      <img src='./HW1/gif/exp.gif' width=300>
+</p>
 
-     **Quaternion**
-
+**Quaternion**
+<p align="center">
      <img src='./HW1/gif/quat.gif' width=300>
 </p>
 
