@@ -24,6 +24,6 @@ Spring 2019 GCT525 by `Prof. Sunghee Lee`
 2. Implement `Bezier Curve` and `Frenet Frame`
   * Tangent, Normal, Binormal  
   
-![alt text](./HW1/gif/bezier.gif =100x)
+<img src='./HW1/gif/bezier.gif' align="middle" width=384>
 
 ## HW2 -
