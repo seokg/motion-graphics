@@ -7,24 +7,24 @@
 
 **Euler**
 <p>    
-     <img src='./gif/euler.gif' width=300>
+     <img src='./gif/euler.gif' width=500>
 </p>
 
 **Exponential Map**
 <p>
-     <img src='./gif/exp.gif' width=300>
+     <img src='./gif/exp.gif' width=500>
 </p>
 
 **Quaternion**
 <p>
-     <img src='./gif/quat.gif' width=300>
+     <img src='./gif/quat.gif' width=500>
 </p>
 
 
 2. Implement `Bezier Curve` and `Frenet Frame`
   * Tangent, Normal, Binormal  
 <p>
-     <img src='./gif/bezier.gif' width=300>
+     <img src='./gif/bezier.gif' width=500>
 </p>
 
 
