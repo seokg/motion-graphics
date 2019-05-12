@@ -15,7 +15,7 @@
 3. CCD Inverse Kinematics
 
 <p>    
-     <img src='./gif/CCDIK.gif' width=400>
+     <img src='./gif/ccdIK.gif' width=400>
 </p>
 
 # Troubleshooting
