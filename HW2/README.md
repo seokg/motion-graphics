@@ -9,13 +9,13 @@
 2. Body Jacobian Inverse Kinematics
 
 <p>    
-     <img src='./gif/jacobianIK.gif' width=400>
+     <img src='./gif/JIK.gif' width=400>
 </p>
 
 3. CCD Inverse Kinematics
 
 <p>    
-     <img src='./gif/ccdIK.gif' width=400>
+     <img src='./gif/CCDIK.gif' width=400>
 </p>
 
 # Troubleshooting
